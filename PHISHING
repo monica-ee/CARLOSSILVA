@@ -1,0 +1,54 @@
+1. /*
+    2.  * Haga clic en nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt para cambiar esta licencia
+    3.  * Haga clic en nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java para editar esta plantilla
+    4.  */
+    5. paquete phishing ;
+    6. importar java.io.BufferedReader ;
+    7. importar java.io.FileReader ;
+    8. importar java.io.IOException ;
+    9. importar java.util.Arrays ;
+    10. importar java.util.List ;
+    11. /**
+    12.  *
+    13.  * @autor Mónica
+    14.  */
+    15. clase pública Phishing {
+    16.  
+    17.     /**
+    18.      * @param argumenta los argumentos de la línea de comando
+    19.      */
+    20.     public static void principal ( String [ ] args ) {
+    21.         String fileName = "texto.txt" ; // Nombre del archivo a explorar
+    22.         List < String > phishingTerms = Matrices . comoLista (
+    23.             "Verificación de cuenta" , "Urgente" , "Actualizar información" , "Problemas con tu cuenta" ,
+    24.             "Oferta especial" , "Ganador de premio" , "Confirmar tus datos" , "Caducidad de contraseña" ,
+    25.             "Ganaste un iPhone/Smartphone" , "Iniciar sesión para evitar el bloqueo" , "Cuenta suspendida" ,
+    26.             "¡Felicidades!" , "Gana dinero rápido" , "Herencia inesperada" , "Promoción exclusiva" ,
+    27.             "Oficial de seguridad" , "Aviso importante" , "Querido cliente" , "Gestión de cuenta" ,
+    28.             "Restricción de cuenta" , "Reclamar premio ahora" , "Cambio de política" , "Phishing detectado" ,
+    29.             "Comprueba esto" , "Actualizar seguridad" , "Centro de seguridad" , "Oferta de trabajo" ,
+    30.             "Aviso de pago" , "Transacción sospechosa" , "Restablecer contraseña"
+    31.         ) ;
+    32.  
+    33.         prueba {
+    34.             FileReader fileReader = new FileReader ( fileName ) ;
+    35.             BufferedReader bufferedReader = new BufferedReader ( fileReader ) ;
+    36.  
+    37.             línea de cuerda ;
+    38.             int número de línea = 1 ;
+    39.  
+    40.             while ( ( línea = bufferedReader. readLine ( ) ) != null ) {
+    41.                 para ( Término de cadena : phishingTerms ) {
+    42.                     if ( línea. contiene ( término ) ) {
+    43.                         sistema _ fuera _ println ( "Línea " + numeroLinea + ": '" + termino + "'encontrado." ) ;
+    44.                     }
+    45.                 }
+    46.                 número de línea ++;
+    47.             }
+    48.  
+    49.             lector almacenado en búfer. cerrar ( ) ;
+    50.         } captura ( IOException e ) {
+    51.             sistema _ error _ println ( "Error al leer el archivo: " + e. getMessage ( ) ) ;
+    1.         }
+    1.     }
+    1. }
